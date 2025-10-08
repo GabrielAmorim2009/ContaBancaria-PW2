@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+body{
+    background: rgb(19, 19, 19);
+    height: 100vh;
+}
+.headerBanco{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-bottom: solid 2px rgb(255, 115, 0);
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    box-shadow: 0 0 15px rgb(255, 115, 0);
+    height: 11vh;
+    z-index: 3;
+}
+.headerBanco div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    padding-bottom: 10px;
+}
+.headerBanco div img{
+    margin-top: -10px;
+}
+.headerBanco div p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    font-weight: bold;
+    font-size: 20px;
+    height: 18px;
+    bottom: 0;
+    color: rgb(255, 115, 0);
+}
+.logoHeader{
+    height: 85px;
+}
+.logoHeader:hover{
+    transition: .4s;
+    transform: scale(1.05);
+}
+.headerBanco a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(255, 115, 0);
+}
+.headerBanco a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    margin-top: -5px;
+    background: rgb(255, 115, 0);
+}
+.headerBanco a:hover::after{
+    transition: .3s;
+    width: 100%;
+}
+
+/*Home*/
+
+.homeMain{
+    display: flex;
+}
+.homeMain div{
+    width: 50%;
+    height: 88vh;
+    margin-top: 1vh;
+}
+.divContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 90px;
+}
+.divContent p{
+    color: rgb(255, 115, 0);
+    font-size: 45px;
+}
+.corAzul{
+    color: rgb(0, 57, 212);
+}
+.divContent a{
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    background: rgb(255, 115, 0);
+    box-shadow: 0 0 15px black;
+    border: solid 3px black;
+    border-bottom-width: 7px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+.divContent a:hover{
+    background: rgb(241, 97, 0);
+    box-shadow: 0 0 25px rgb(255, 115, 0);
+}
+.divContent a:active{
+    margin-top: 34px;
+    border-bottom-width: 3px;
+}
+.imgCarro{
+    background-image: url(/images/Carro\ java.png);
+}
+
+/*Home*/ 
+
+
+/*Cadastro*/ 
+
+.bodyCadastro{
+    display: flex;
+}
+.setaVoltarForm{
+    position: absolute;
+
+    color: white;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+}
+.setaVoltarForm:active{
+    left: 12px;
+    transition: .1s;
+}
+.divForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 100px;
+    width: 50%;
+}
+.logoForm{
+    display: flex;
+    align-items: end;
+
+    margin: 0 auto;
+    width: 67%;
+}
+.logoForm p{
+    color: rgb(255, 115, 0);
+    font-size: 50px;
+}
+.divForm img{
+    height: 100px;
+    margin-left: -20px;
+}
+.CriarConta{
+    color: gray;
+    margin: 40px auto;
+    font-size: 40px;
+    width: 67%;
+}
+.formCriarConta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    height: 400px;
+    width: 67%;
+    margin: 0 auto;
+}
+.divIpt{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    height: 56px;
+}
+.divIpt label{
+    position: absolute;
+
+    pointer-events: none;
+    color: #808080;
+    left: 17px;
+    z-index: 2;
+}
+.iptForm{
+    position: absolute;
+
+    border: solid 2px black;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 2px;
+    margin: 10px 0;
+}
+.iptForm:focus{
+    border-color: rgb(253, 123, 17);
+}
+.iptForm:focus + label{
+    color: black;
+    font-size: 10px;
+    top: 10px;
+    transition: .4s;
+}
+.iptForm:valid + label{
+    font-size: 10px;
+    top: 10px;
+}
+.divIptRadio{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+}
+.divIptRadio label{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-right: 7px;
+}
+.divIptRadio input[type="radio"]{
+    cursor: pointer;
+    transform: scale(1.4);
+}
+.btnSubmit{
+    cursor: pointer;
+    border: solid 3px rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom-width: 8px;
+    border-radius: 8px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background: rgb(255, 115, 0);
+    padding: 16px;    
+    width: 100%;
+}
+.btnSubmit:hover{
+    background: rgb(247, 99, 0);
+    box-shadow: 0 0 15px rgb(255, 115, 0);
+}
+.btnSubmit:active{
+    border-bottom-width: 3px;
+    margin-top: 5px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.imgCadastro{
+    background-image: url(/images/PessoaCelular.png);
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+}
+
+/*Cadastro*/ 
+
+
+/*Listar*/ 
+
+.navListar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: black;
+    height: 10vh;
+}
+.navListar h1{
+    color: rgb(255, 115, 0);
+}
+.tableListar{
+    margin: 30px auto;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.containerHeadTable{
+}
+.containerHeadTable th{
+    border: solid 2px rgb(31, 31, 31);
+    padding: 20px;
+}
+.containerBodyTable th{
+    border: solid 2px rgb(56, 56, 56);
+}
+
+/*Listar*/ 
