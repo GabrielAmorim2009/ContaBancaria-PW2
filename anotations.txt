@@ -1,0 +1,131 @@
+ClientePF
+    cadastrar()
+    alterar()
+    deletar()
+    consultarTodos (com filtro de nome)
+    consultarProCPF()
+    consultarID()
+    consultarPorEmail()
+
+ClientePJ
+    cadastrar()
+    alterar()
+    deletar()
+    consultarTodos (com filtro de nome, razao social)
+    consultarProCNPJ()
+    consultarID()
+    consultarPorEmail()
+
+Contas
+    cadastrar()
+    alterar()
+    deletar()
+    consultarID()
+    consultarPorCliente()
+    consultarTodos(filtrar por nome do cliente)
+
+Contas Transações
+    Depositar()
+    Transferir()
+
+---------- Criação da procedure para criar uma nova conta ----------
+--DELIMITER $$
+--CREATE PROCEDURE IF NOT EXISTS CriarConta(
+--    IN p_cliente_id INT,
+--    IN p_tipo_conta ENUM('corrente', 'poupanca') NOT NULL,
+--)
+--BEGIN
+--    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+--
+--    BEGIN
+--        ROLLBACK
+--    END
+--
+--    START TRANSACTION
+--
+--    INSERT INTO Contas (cliente_id, tipo_conta)
+--    VALUES (p_cliente_id, p_tipo_conta);
+--
+--    COMMIT;
+--END $$
+--DELIMITER ;
+--
+--
+------------ Criação da procedure para realizar um depósito ----------
+--DELIMITER $$
+--CREATE PROCEDURE IF NOT EXISTS Depositar(
+--    IN p_conta_id INT,
+--    IN p_valor DECIMAL(10,2)
+--)
+--BEGIN
+--    UPDATE Contas
+--    SET saldo = saldo + p_valor
+--    WHERE id = p_conta_id;
+--
+--    INSERT INTO Transacoes (conta_id, tipo, valor, data)
+--    VALUES (p_conta_id, 'deposito', p_valor, NOW());
+--
+--    COMMIT;
+--END $$
+--DELIMITER ;
+--
+--
+------------ Criação da procedure para realizar uma transferência ----------
+--DELIMITER $$
+--CREATE PROCEDURE IF NOT EXISTS Transferir(
+--
+--)
+--BEGIN
+--
+--    COMMIT;
+--END $$
+--DELIMITER ;
+--
+--
+------------ Criação da procedure para realizar um saque ----------
+--
+--DELIMITER $$
+--CREATE PROCEDURE IF NOT EXISTS Saque(
+--
+--)
+--BEGIN
+--    COMMIT;
+--END $$
+--DELIMITER ;
+--
+--
+------------ Criação da procedure para desativar/ativar a conta ----------
+--
+--DELIMITER $$
+--CREATE PROCEDURE IF NOT EXISTS MudarStatus(
+--
+--)
+--BEGIN
+--    COMMIT;
+--END $$
+--DELIMITER ;
+--
+--
+------------ Criação da procedure para consultar o saldo e o extrato da conta ----------
+--DELIMITER $$
+--CREATE PROCEDURE IF NOT EXISTS ConsultarConta(
+--
+--)
+--BEGIN
+--    COMMIT;
+--END $$
+--DELIMITER ;
+--
+--
+------------ Criação da procedure para editar os dados da conta ----------
+--DELIMITER $$
+--CREATE PROCEDURE IF NOT EXISTS EditarConta(
+--
+--)
+--BEGIN
+--    COMMIT;
+--END $$
+--DELIMITER ;
+--
+--
+--CALL CriarConta(1, 'corrente');
